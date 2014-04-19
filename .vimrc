@@ -42,7 +42,9 @@ set pastetoggle=<F2>
 no <Up> ddkP
 no <Left> <Nop>
 no <Right> yyp
-no <Down> ddjp
+no <Down> ddp
+
+no <D-o> :NERDTree
 
 " ===== GUI-related settings =====
 if has("gui_running")
