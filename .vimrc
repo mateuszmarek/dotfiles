@@ -44,6 +44,11 @@ no <Left> <Nop>
 no <Right> yyp
 no <Down> ddp
 
+ino <Up> <Nop>
+ino <Left> <Nop>
+ino <Right> <Nop>
+ino <Down> <Nop>
+
 no <D-o> :NERDTree
 
 " ===== GUI-related settings =====
