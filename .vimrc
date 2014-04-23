@@ -49,8 +49,6 @@ ino <Left> <Nop>
 ino <Right> <Nop>
 ino <Down> <Nop>
 
-no <D-o> :NERDTree
-
 " ===== GUI-related settings =====
 if has("gui_running")
     set lines=45 columns=150
