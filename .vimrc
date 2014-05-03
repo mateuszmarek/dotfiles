@@ -30,8 +30,9 @@ set cursorline
 colorscheme solarized
 let g:solarized_visibility = "high"
 let g:solarized_contrast = "high"
-let g:indentLine_char='|'
+set background=dark
 set t_Co=256
+let g:indentLine_char='|'
 
 " ===== Key mapping =====
 no <F5> :buffers<CR>:buffer<Space>
@@ -53,6 +54,4 @@ ino <Down> <Nop>
 if has("gui_running")
     set lines=45 columns=150
     set gfn=Inconsolata:h15
-    colorscheme solarized
-    set background=dark
 endif
