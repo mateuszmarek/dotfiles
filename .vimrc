@@ -41,12 +41,12 @@ set pastetoggle=<F2>
 
 " Disable/remap arrow keys 
 no <Up> ddkP
-no <Left> <Nop>
+no <Left> "_dd
 no <Right> yyp
 no <Down> ddp
 
 ino <Up> <Nop>
-ino <Left> <Nop>
+ino <Left> <Esc>"_ddi
 ino <Right> <Nop>
 ino <Down> <Nop>
 
