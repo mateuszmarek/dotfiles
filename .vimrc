@@ -12,6 +12,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'vim-scripts/AutoTag'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'Yggdroot/indentLine'
+Plugin 'kien/ctrlp.vim'
 
 " Optional:
 " Plugin 'honza/vim-snippets'
@@ -56,3 +57,10 @@ if has("gui_running")
     set lines=45 columns=150
     set gfn=Inconsolata:h15
 endif
+
+" ===== CtrlP settings =====
+let g:ctrlp_custom_ignore = {
+	\ 'dir':  '\v[\/]\.(git|hg|svn)$',
+	\ 'file': '\v\.(exe|so|dll)$',
+	\ 'link': 'SOME_BAD_SYMBOLIC_LINKS',
+	\ }
