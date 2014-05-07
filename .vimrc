@@ -36,6 +36,7 @@ let g:indentLine_char='|'
 
 " ===== Key mapping =====
 no <F5> :buffers<CR>:buffer<Space>
+no <Leader>d :NERDTree<CR>
 no <CR> o<Esc>
 set pastetoggle=<F2>
 
