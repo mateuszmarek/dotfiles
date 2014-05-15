@@ -26,6 +26,8 @@ set shiftwidth=4
 set expandtab
 set number
 set cursorline
+set ruler
+set tags=./tags,tags,/Users/mm/Pilab/tags,/Volumes/Pilab/tags
 
 " ===== Colors =====
 colorscheme solarized
@@ -62,5 +64,5 @@ endif
 let g:ctrlp_custom_ignore = {
 	\ 'dir':  '\v[\/]\.(git|hg|svn)$',
 	\ 'file': '\v\.(exe|so|dll)$',
-	\ 'link': 'SOME_BAD_SYMBOLIC_LINKS',
-	\ }
+    \ }
+let g:ctrlp_extensions = ['tags'] 
