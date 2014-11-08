@@ -2,20 +2,10 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
-set rtp+=~/.vim/bundle/vundle/
+set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#rc()
 Plugin 'gmarik/vundle'
-" Plugin 'MarcWeber/vim-addon-mw-utils'
-" Plugin 'tomtom/tlib_vim'
-" Plugin 'garbas/vim-snipmate'
-Plugin 'scrooloose/nerdtree'
-Plugin 'vim-scripts/AutoTag'
-Plugin 'altercation/vim-colors-solarized'
 Plugin 'Yggdroot/indentLine'
-Plugin 'kien/ctrlp.vim'
-
-" Optional:
-" Plugin 'honza/vim-snippets'
 
 " ===== General =====
 filetype plugin indent on
@@ -30,39 +20,28 @@ set ruler
 set tags=./tags,tags,/Users/mm/Pilab/tags,/Volumes/Pilab/tags
 
 " ===== Colors =====
-colorscheme solarized
-let g:solarized_visibility = "high"
-let g:solarized_contrast = "high"
-set background=dark
+colorscheme elflord
 set t_Co=256
 let g:indentLine_char='|'
 
 " ===== Key mapping =====
-no <F5> :buffers<CR>:buffer<Space>
-no <Leader>d :NERDTree<CR>
-no <CR> o<Esc>
 set pastetoggle=<F2>
-
-" Disable/remap arrow keys 
-no <Up> ddkP
-no <Left> "_dd
-no <Right> yyp
-no <Down> ddp
-
-ino <Up> <Nop>
-ino <Left> <Esc>"_ddi
-ino <Right> <Nop>
-ino <Down> <Nop>
 
 " ===== GUI-related settings =====
 if has("gui_running")
     set lines=45 columns=150
+    colorscheme slate
     set gfn=Inconsolata:h15
 endif
 
-" ===== CtrlP settings =====
-let g:ctrlp_custom_ignore = {
-	\ 'dir':  '\v[\/]\.(git|hg|svn)$',
-	\ 'file': '\v\.(exe|so|dll)$',
-    \ }
-let g:ctrlp_extensions = ['tags'] 
+" ===== Golang related settings =====
+let g:gofmt_command = "goimports"
+
+autocmd FileType go autocmd BufWritePre <buffer> silent Fmt
+if exists("g:did_load_filetypes")
+    filetype off 
+    filetype plugin indent off 
+endif
+set runtimepath+=/usr/local/Cellar/go/1.3.3/libexec/misc/vim
+filetype plugin indent on
+syntax on
