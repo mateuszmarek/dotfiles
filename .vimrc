@@ -15,9 +15,7 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 set number
-set cursorline
 set ruler
-set tags=./tags,tags,/Users/mm/Pilab/tags,/Volumes/Pilab/tags
 
 " ===== Colors =====
 colorscheme elflord
@@ -30,7 +28,6 @@ set pastetoggle=<F2>
 " ===== GUI-related settings =====
 if has("gui_running")
     set lines=45 columns=150
-    colorscheme slate
     set gfn=Inconsolata:h15
 endif
 
